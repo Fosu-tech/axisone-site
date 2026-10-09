@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Author: John Fosu -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AxisOne is an AI CRM and automation agency for local service businesses in Charlotte and Waxhaw, NC.">
+  <title>AxisOne | AI Automation for Local Service Businesses</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Internal CSS: styles used only on the home page -->
+  <style>
+    .hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 64px;
+      padding: 96px 120px 104px;
+      background: linear-gradient(180deg, #F5F7FB, #EFECFF);
+    }
+
+    .hero-copy {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #4D43E5, #976EF7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 20px;
+      color: #5B6478;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 28px;
+      margin: 0;
+      padding: 8px 0 0;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5B6478;
+    }
+
+    .trust-row li::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      border-radius: 4px;
+      background-color: #14B8A6;
+    }
+
+    .hero-visual {
+      width: 460px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .demo-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 24px;
+      border-radius: 20px;
+      background-color: #FFFFFF;
+      box-shadow: 0 20px 50px rgba(21, 20, 46, 0.12);
+    }
+
+    .demo-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .demo-head .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 17px;
+    }
+
+    .demo-head strong {
+      display: block;
+      color: #15142E;
+    }
+
+    .demo-head span {
+      font-size: 13px;
+      color: #5B6478;
+    }
+
+    .bubble {
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-size: 15px;
+    }
+
+    .bubble-auto {
+      background-color: #4D43E5;
+      color: #FFFFFF;
+    }
+
+    .bubble-auto small {
+      display: block;
+      margin-bottom: 6px;
+      color: #D8D0FF;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .bubble-reply {
+      background-color: #F5F7FB;
+      color: #0F0F1F;
+    }
+
+    .booked {
+      padding: 12px 14px;
+      border-radius: 12px;
+      background-color: #E3F6F3;
+      color: #0F766E;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .mini-stat {
+      padding: 20px;
+      border-radius: 16px;
+      background-color: #15142E;
+      color: #CBC7EA;
+      font-size: 13px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      color: #FFFFFF;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .steps .card {
+      gap: 14px;
+      background-color: #FFFFFF;
+      border: 1px solid #E3E8F0;
+    }
+
+    .step-num {
+      color: #4D43E5;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .steps .card h3 {
+      font-size: 22px;
+    }
+
+    .why {
+      padding-top: 24px;
+    }
+
+    .why .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .why .card {
+      gap: 14px;
+      padding: 28px;
+    }
+
+    .why .card h3 {
+      font-size: 19px;
+    }
+
+    .why .card p {
+      font-size: 15px;
+    }
+
+    @media (max-width: 1024px) {
+      .hero {
+        flex-direction: column;
+        padding: 64px 32px;
+      }
+
+      .hero h1 {
+        font-size: 56px;
+      }
+
+      .hero-visual {
+        width: 100%;
+        max-width: 460px;
+      }
+
+      .why .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 48px 20px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-sub {
+        font-size: 18px;
+      }
+
+      .why .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">
+      <img src="images/axisone-logo.png" alt="AxisOne logo" width="175" height="40">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="contact.html">Book a Free Strategy Call <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">AI Growth Partner for Local Service Businesses</span>
+        <h1>Your Business. <span class="gradient-text">Fully Automated.</span></h1>
+        <p class="hero-sub">AxisOne builds and manages the AI systems that capture every call, convert every lead, and grow your revenue — so you can focus on running your business.</p>
+        <div class="hero-buttons">
+          <!-- Inline CSS: extra shadow on the main call-to-action button -->
+          <a class="btn btn-primary" href="contact.html" style="box-shadow: 0 10px 24px rgba(77, 67, 229, 0.35);">Book a Strategy Call <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="pricing.html">See pricing</a>
+        </div>
+        <ul class="trust-row">
+          <li>Done for you — no software to learn</li>
+          <li>Built for local businesses</li>
+          <li>No long-term contracts</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" role="group" aria-label="Example of a missed call being answered by an automatic text">
+        <div class="demo-card">
+          <div class="demo-head">
+            <span class="icon icon-amber" aria-hidden="true">☎</span>
+            <div>
+              <strong>Missed call</strong>
+              <span>(704) 555-0199 · 2:14 PM</span>
+            </div>
+          </div>
+          <p class="bubble bubble-auto"><small>AUTO TEXT · SENT IN 12 SEC</small>Hi! Sorry we missed your call at Green Oak Plumbing. What can we help you with today?</p>
+          <p class="bubble bubble-reply">Water heater is leaking. Can someone come out tomorrow morning?</p>
+          <p class="booked"><span aria-hidden="true">✓</span> Booked · Tue 8:00 AM · $340 job</p>
+        </div>
+        <div class="mini-stats">
+          <p class="mini-stat"><strong>&lt; 60 sec</strong>reply to every missed call</p>
+          <p class="mini-stat"><strong>24/7</strong>lead response, nights &amp; weekends</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The three problems -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill">The problem</span>
+          <h2>Most local businesses don’t have a lead problem. They have a follow-up problem.</h2>
+          <p class="lead">The calls and inquiries are already coming in. They just slip through while you’re on a job, with a patient, or closing up for the night.</p>
+        </div>
+
+        <!-- Inline CSS: each problem card's callout line gets its own color -->
+        <div class="card-grid">
+          <article class="card">
+            <span class="icon icon-amber" aria-hidden="true">☎</span>
+            <h3>Missed calls</h3>
+            <p>You can’t pick up mid-job, so callers hang up and dial the next business on Google.</p>
+            <div class="divider"></div>
+            <p class="callout" style="color: #F59E0B;">Every unanswered call is a job for your competitor.</p>
+          </article>
+          <article class="card">
+            <span class="icon icon-purple" aria-hidden="true">⏱</span>
+            <h3>Slow lead response</h3>
+            <p>Web and Facebook leads sit for hours. By the time you reply, they’ve already booked someone else.</p>
+            <div class="divider"></div>
+            <p class="callout" style="color: #4D43E5;">The first business to reply usually wins the job.</p>
+          </article>
+          <article class="card">
+            <span class="icon icon-teal" aria-hidden="true">↻</span>
+            <h3>Dead customer lists</h3>
+            <p>Hundreds of past customers who never heard from you again after their first visit.</p>
+            <div class="divider"></div>
+            <p class="callout" style="color: #14B8A6;">Your cheapest new job is a customer you already have.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real result -->
+    <section class="result">
+      <div class="container result-row">
+        <figure class="result-quote">
+          <span class="pill">Real result</span>
+          <blockquote>
+            <p>“We texted our old customer list on a Monday and had the next two weeks booked by Friday. I didn’t have to do anything but show up.”</p>
+          </blockquote>
+          <figcaption><cite>Owner, carpet &amp; upholstery cleaning company · Waxhaw, NC</cite></figcaption>
+        </figure>
+        <ul class="result-numbers">
+          <li><strong>38</strong> past customers rebooked in 30 days</li>
+          <li><strong>$11,400</strong> in revenue from an existing list</li>
+          <li><strong>0</strong> new ad spend</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section steps">
+      <div class="container">
+        <div class="section-header">
+          <span class="pill">How it works</span>
+          <h2>Three steps. We do the heavy lifting.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="step-num">01</span>
+            <h3>Book a Strategy Call</h3>
+            <p>We’ll review your current setup and show you exactly where you’re losing leads and revenue.</p>
+          </article>
+          <article class="card">
+            <span class="step-num">02</span>
+            <h3>We Build Your System</h3>
+            <p>Our team installs a fully customized AI-powered automation system into your business. You don’t touch anything.</p>
+          </article>
+          <article class="card">
+            <span class="step-num">03</span>
+            <h3>You Grow</h3>
+            <p>Leads get answered. Follow-ups happen automatically. Appointments get booked. You focus on what you do best.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why AxisOne -->
+    <section class="section why">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why <span class="gradient-text">AxisOne</span></h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <span class="icon icon-gradient" aria-hidden="true">✦</span>
+            <h3>Done for you</h3>
+            <p>We build, manage, and optimize. You log in and see results.</p>
+          </article>
+          <article class="card">
+            <span class="icon icon-gradient" aria-hidden="true">✓</span>
+            <h3>No long-term contracts</h3>
+            <p>Month-to-month, cancel anytime with 30 days’ notice.</p>
+          </article>
+          <article class="card">
+            <span class="icon icon-gradient" aria-hidden="true">⌂</span>
+            <h3>Built for local businesses</h3>
+            <p>Not a generic SaaS tool. Configured for your specific business from day one.</p>
+          </article>
+          <article class="card">
+            <span class="icon icon-gradient" aria-hidden="true">≡</span>
+            <h3>Industry-specific approach</h3>
+            <p>Med spas don’t run like restaurants. Our systems reflect that.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-band">
+      <div class="container cta-card">
+        <div>
+          <h2>Ready to put your business on autopilot?</h2>
+          <p>Book a strategy call and we’ll show you exactly how AxisOne fits your business.</p>
+        </div>
+        <a class="btn btn-white" href="contact.html">Book a Strategy Call <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="footer-logo" href="index.html">
+            <img src="images/axisone-logo.png" alt="AxisOne logo" width="166" height="38">
+          </a>
+          <p>Your Business. Fully Automated. AI Growth Partner for local service businesses.</p>
+        </div>
+
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address>
+            <ul>
+              <li><a href="mailto:info@axisonehq.com">info@axisonehq.com</a></li>
+              <li><a href="tel:+13083651577">(308) 365-1577</a></li>
+              <li>Charlotte, NC metro area</li>
+            </ul>
+          </address>
+        </div>
+
+        <form class="signup" action="#" method="post">
+          <h2>Not ready to book a call?</h2>
+          <p>Get one practical automation idea for your business each month. No spam.</p>
+          <div class="signup-row">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email" required>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AxisOne. All rights reserved.</p>
+        <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
